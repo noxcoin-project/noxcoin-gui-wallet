@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Noxcoin GUI
+GenericName=Noxcoin-GUI
+Comment=Noxcoin GUI
+Exec=noxcoin-wallet-gui
+Type=Application
+Terminal=false
+Categories=Network;Qt;Finance;Office;
+Icon=org.getnoxcoin.Noxcoin
+StartupNotify=true
