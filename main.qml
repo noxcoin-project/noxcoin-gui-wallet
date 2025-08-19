@@ -353,7 +353,13 @@ ApplicationWindow {
         middlePanel.getProofClicked.connect(handleGetProof);
         middlePanel.checkProofClicked.connect(handleCheckProof);
 
-        persistentSettings.restore_height = currentWallet.walletCreationHeight;
+        persistentSettings.restore_height = 0;
+
+        if (currentWallet.walletCreationHeight !== 0) {
+            currentWallet.walletCreationHeight = 0;
+
+            currentWallet.setPassword(walletPassword);
+        }
 
         console.log("Recovering from seed: ", persistentSettings.is_recovering)
         console.log("restore Height", persistentSettings.restore_height)
